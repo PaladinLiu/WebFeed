@@ -23,7 +23,7 @@ POST
 {
 	"user_name": xxx,
     "passwd": xxx,
-    "nickname": xxx,
+    "nick_name": xxx,
 }
 ```
 
@@ -59,6 +59,7 @@ Response:
 ```
 status: 200
 {"code": "200", "msg": "login success"}
+
 status: 401
 {"code": "401", "msg": "login failed"}
 ```
@@ -304,7 +305,7 @@ status: 401
 
 
 
-##### 6.创建转发
+##### 6.创建转发 new tweet 
 
 Request:
 
@@ -465,7 +466,7 @@ status: 401
 
 ### 查找系统 query
 
-[问题3] 查找做补全、近似、根据内容查找推文等功能在服务层完成？过程如何？猜测： 接收请求-处理近似过后再查库，但这样还是需要在处理内容的时候遍历库？目前查找功能仅支持uuid和发推人
+[问题3] 后期问题 查找做补全、近似、根据内容查找推文等功能在服务层完成？猜测： 接收请求-处理近似过后再查库，但这样还是需要在处理内容的时候遍历库？目前查找功能仅支持uuid和发推人
 
 [问题4] 查找 现实中应该无论按id nickname username 都可以查到 是按这三者直接进库查 还是经过了转换呢（转换类似dns，把查到的对应表存在本地这种，本地没有就去查库）
 
@@ -580,7 +581,60 @@ status: 401
 
 ### 推荐系统 recommend
 
-1.关注
+##### 1.关注
+
+Request:
+
+```
+URL: api/v1/recommend/follow
+
+GET
+{
+	"uuid": xxx,
+}
+```
+
+Response:
+
+```
+status: 200
+{
+	"code": "200", 
+	"msg": "follow success",
+}
+	
+status: 401
+{"code": "401", "msg": "follow failed"}
+```
 
 
 
+##### 2.取消关注
+
+Request:
+
+```
+URL: api/v1/recommend/unfollow
+
+GET
+{
+	"uuid": xxx,
+}
+```
+
+Response:
+
+```
+status: 200
+{
+	"code": "200", 
+	"msg": "unfollow success",
+}
+	
+status: 401
+{"code": "401", "msg": "unfollow failed"}
+```
+
+
+
+3.
