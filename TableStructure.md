@@ -24,11 +24,15 @@ id
 
 uuid
 
-time
+time_created
 
-user_uuid
+creator_uuid
+
+is_retweet
 
 content_text
+
+origin
 
 //content_image
 
@@ -44,11 +48,11 @@ id
 
 uuid
 
-time
+time_created
 
 tweet_uuid
 
-user_uuid
+creator_uuid
 
 content_text
 
@@ -62,11 +66,11 @@ id
 
 uuid
 
-time
+time_created
 
-like_uuid
+tweet_uuid
 
-user_uuid
+creator_uuid
 
 );
 
@@ -82,7 +86,7 @@ time
 
 retweet_uuid
 
-user_uuid
+creator_uuid
 
 );
 

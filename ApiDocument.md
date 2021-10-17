@@ -153,7 +153,7 @@ status: 401
 
 
 
-### 互动系统 Interaction
+### 互动系统 Interact
 
 转赞评
 
@@ -164,7 +164,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/createComment
+URL: api/v1/interact/createComment
 
 POST
 {
@@ -196,7 +196,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/modifyComment
+URL: api/v1/interact/updateComment
 
 PATCH
 {
@@ -225,7 +225,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/deleteComment
+URL: api/v1/interact/deleteComment
 
 DELETE
 {
@@ -253,7 +253,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/createLike
+URL: api/v1/interact/createLike
 
 POST
 {
@@ -282,7 +282,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/deleteLike
+URL: api/v1/interact/deleteLike
 
 DELETE
 {
@@ -310,7 +310,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/createRetweet
+URL: api/v1/interact/createRetweet
 
 POST
 {
@@ -339,7 +339,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/deleteRetweet
+URL: api/v1/interact/deleteRetweet
 
 DELETE
 {
@@ -367,7 +367,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/queryRetweet
+URL: api/v1/interact/getRetweet
 
 GET
 {
@@ -400,7 +400,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/queryLike
+URL: api/v1/interact/getLike
 
 GET
 {
@@ -433,7 +433,7 @@ status: 401
 Request:
 
 ```
-URL: api/v1/interaction/queryComment
+URL: api/v1/interact/getComment
 
 GET
 {
